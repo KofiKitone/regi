@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}Chat{% endblock %}
+
+{% block content %}
+
+<div class="container mb-5" style="height: 100vh;">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="d-flex justify-content-between align-items-end mt-5">
+                <h1 class="text-center">Chat with Regis</h1>
+                <a href="{{ url_for('routes.book')}}" >Not satisfied? talk to an expect</a>
+            </div>
+            <div id="chat-container mb-0" class="bg-dark rounded p-3" style="height:70vh; overflow-y: auto;">
+                <!-- Chat messages will be appended here -->
+            </div>
+            
+            <div class="input-group mt-3 mb-5">
+                <input type="text" class="form-control" style="border-radius:13px" placeholder="talk to, what's on your mind..." >
+                <button class="btn btn-outline-primary border-none" type="button">Go</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+    
